@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+    <title>Powerhouse Museum - Exhibit 3.0 Staged Demo</title> 
+ 
+    <link href="http://backstage.zepheira.com:8181/backstage/data/mem/powerhouse" rel="exhibit/data" /> 
+
+    <script src="http://backstage.zepheira.com:8181/backstage/exhibit/api/exhibit-api.js?autoCreate=false&postLoad=true&js=http://backstage.zepheira.com:8181/backstage/api/backstage-api.js"></script> 
+ 
+    <script type="text/javascript"> 
+        //Backstage.JsonpTransport.removeScripts = false;
+        
+        function mouseOver(elmt) {
+            elmt.style.background = "#eee";
+        }
+        function mouseOut(elmt) {
+            elmt.style.background = "none";
+        }
+    </script> 
+    <style> 
+        body {
+            font-family:    Tahoma, Arial, sans serif;
+            font-size:      10pt;
+            margin:         3em;
+            padding:        0;
+        }
+        table { font-size: 100%; }
+        tr { vertical-align: top; }
+        
+        .a-lens {
+            border:         1px solid #ccc;
+            margin-bottom:  2em;
+        }
+    </style> 
+</head> 
+<body> 
+<div id="content"> 
+    <div ex:role="lens" class="a-lens" onmouseover="mouseOver(this);" onmouseout="mouseOut(this);" style="display: none;"> 
+        <a ex:href-content=".permanent_url" target="_blank">
+        <table cellspacing="10"><tr>
+            <td><img ex:src-content=".thumbnail" /></td>
+            <td> 
+                <div><b ex:content=".label"></b></div>
+                <div>Registration Number: <span ex:content=".registration_number"></span></div>
+                <div>Acquired: <span ex:content=".acquisition_credit_line"></span></div>
+            </td>
+        </tr></table>
+        </a>
+    </div> 
+    
+    <table width="100%" cellspacing="20"><tr valign="top"> 
+        <td> 
+            <div id="title-panel"> 
+                <h1>Powerhouse Museum - Exhibit 3.0 Staged Demo</h1> 
+                <p>The following interface is run by <a href="http://www.simile-widgets.org/exhibit3/">Exhibit 3.0</a> Staged.  Exhibit 3.0 Staged is a web service that that takes over heavy computations from the browser-based components of Exhibit 3.0 Scripted to speed up the faceted navigation of very large data sets.</p>
+                </p> 
+            </div> 
+            <div ex:role="view"> 
+            </div> 
+        </td> 
+        <td width="10%"> 
+            <div ex:role="facet"
+                ex:expression=".acquisition_credit_line"
+                ex:facetLabel="Acquired"
+                ex:height="35em"
+                ></div> 
+        </td> 
+        <td width="7%"> 
+            <div ex:role="facet"
+                ex:expression=".num_provenance"
+                ex:facetLabel="Provenance"
+                ex:sortMode="count"
+                ex:height="35em"
+                ></div> 
+        </td> 
+        <td width="7%"> 
+            <div ex:role="facet"
+                ex:expression=".num_subjects"
+                ex:facetLabel="Subjects"
+                ex:sortMode="count"
+                ex:height="35em"
+                ></div> 
+        </td> 
+    </tr></table> 
+</div> 
+</body> 
+</html>

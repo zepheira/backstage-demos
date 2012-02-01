@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+ 
+<html xml:lang="en" lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ex="http://simile.mit.edu/2006/11/exhibit#">
+  <head> 
+    <title>Encyclopedia of Life</title> 
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="http://backstage.zepheira.com:8181/backstage/data/mem/eol" rel="exhibit/data" />
+    <script src="http://backstage.zepheira.com:8181/backstage/exhibit/api/exhibit-api.js?autoCreate=false&postLoad=true&js=http://backstage.zepheira.com:8181/backstage/api/backstage-api.js" type="text/javascript"></script>
+  </head>
+
+  <body> 
+    <div id="title-panel"> 
+      <h1>Encyclopedia of Life</h1> 
+      <p>This <a href="http://simile-widgets.org/exhibit3/">Exhibit 3.0 Staged</a> demo takes a different look at the <a href="http://eol.org/">Encyclopedia of Life</a>.</p>
+    </div> 
+
+    <div id="content"> 
+
+      <div ex:role="lens" class="lens" style="display: none;"> 
+        <a ex:href-content=".link" target="_blank">
+	  <div ex:content=".commonName" class="label"></div>
+          <div ex:content=".name" class="taxon"></div>
+          <img ex:src-content=".image" />
+        </a>
+        <p class="citation">Classified in <span ex:content=".citation"></span></p>
+      </div> 
+    
+      <table width="100%">
+        <tbody>
+          <tr valign="top"> 
+            <td> 
+              <div ex:role="view"></div> 
+            </td> 
+            <td class="sidebar">
+              <div ex:role="facet"
+                ex:expression=".year"
+                ex:sortDirection="reverse"
+                ex:facetLabel="Year Classified"
+                ex:height="20em"
+                ></div>
+              <div ex:role="facet"
+                ex:expression=".classifiedBy"
+                ex:facetLabel="Classified By"
+                ex:height="20em"
+                ></div>
+            </td>
+          </tr>
+        </tbody>
+      </table> 
+    </div> 
+  </body> 
+</html>
