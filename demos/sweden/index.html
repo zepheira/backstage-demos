@@ -4,14 +4,12 @@
  
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
 <head> 
-    <title>Sweden Europeana - Exhibit 3.0 Staged Demo</title> 
+    <title>SIMILE Widgets | Exhibit 3.0 | Staged Demos | Sweden Europeana</title> 
+    <link rel="stylesheet" href="http://www.simile-widgets.org/styles/common.css" type="text/css" />
+    <link href="http://backstage.zepheira.com:8181/backstage/data/mem/europeana-swe" rel="exhibit-data" /> 
  
-    <link href="http://backstage.zepheira.com:8181/backstage/data/mem/europeana-swe" rel="exhibit/data" /> 
- 
-    <script src="http://backstage.zepheira.com:8181/backstage/exhibit/api/exhibit-api.js?autoCreate=false&postLoad=true&js=http://backstage.zepheira.com:8181/backstage/api/backstage-api.js"></script> 
+    <script src="http://backstage.zepheira.com:8181/backstage/exhibit/api/exhibit-api.js?backstage=http://backstage.zepheira.com:8181/backstage/api/backstage-api.js"></script> 
     <script type="text/javascript"> 
-        //Backstage.JsonpTransport.removeScripts = false;
-        
         function mouseOver(elmt) {
             elmt.style.background = "#eee";
         }
@@ -23,8 +21,10 @@
         body {
             font-family:    Tahoma, Arial, sans serif;
             font-size:      10pt;
-            margin:         3em;
             padding:        0;
+        }
+        #content {
+            margin:         3em;
         }
         table { font-size: 100%; }
         tr { vertical-align: top; }
@@ -36,7 +36,14 @@
     </style> 
 </head> 
 <body> 
-<div id="content"> 
+    <ul id="path">
+      <li><a href="http://www.simile-widgets.org/">SIMILE Widgets</a></li>
+      <li><a href="http://www.simile-widgets.org/exhibit3/">Exhibit 3.0</a></li>
+      <li><a href="http://databench.zepheira.com/">Staged Demos</a></li>
+      <li><span>Examples: Sweden Europeana</span></li>
+    </ul>
+    
+    <div id="content"> 
     <div ex:role="lens" class="a-lens" onmouseover="mouseOver(this);" onmouseout="mouseOut(this);" style="display: none;"> 
         <a ex:href-content=".isShownAt" target="_blank">
         <table cellspacing="10"><tr>
@@ -53,8 +60,8 @@
     <table width="100%" cellspacing="20"><tr valign="top"> 
         <td> 
             <div id="title-panel"> 
-                <h1>Sweden Europeana - Exhibit 3.0 Staged Demo</h1> 
-                <p>The following interface is run by <a href="http://www.simile-widgets.org/exhibit3/">Exhibit 3.0</a> Staged.  Exhibit 3.0 Staged is a web service that that takes over heavy computations from the browser-based components of Exhibit 3.0 Scripted to speed up the faceted navigation of very large data sets.</p>
+                <h1>Exhibit 3.0 Staged Demo: Sweden Europeana</h1> 
+                <p>The following interface is run by <a href="http://www.simile-widgets.org/exhibit3/">Exhibit 3.0</a> Staged.  Exhibit 3.0 Staged is a web service that that takes over heavy computations from the browser-based components of Exhibit 3.0 Scripted to speed up the faceted navigation of very large data sets.  Note that Staged has <a href="https://github.com/zepheira/backstage/wiki/Staged-Compared-to-Scripted">fewer features implemented</a> than Scripted.</p>
             </div> 
             <div ex:role="view"> 
             </div> 
